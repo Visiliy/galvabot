@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* GalvaBot Industrial Theme - Black & Silver-Metallic */
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 0% 75%;
+    --primary-foreground: 0 0% 8%;
+
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 85%;
+    --accent-foreground: 0 0% 8%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 25%;
+    --input: 0 0% 20%;
+    --ring: 0 0% 75%;
+
+    --radius: 0.75rem;
+
+    /* Custom GalvaBot variables */
+    --silver: 0 0% 75%;
+    --silver-light: 0 0% 85%;
+    --silver-dark: 0 0% 65%;
+    --metallic: 0 0% 70%;
+    --dark-bg: 0 0% 8%;
+    --darker-bg: 0 0% 5%;
+    
+    /* Gradients */
+    --gradient-silver: linear-gradient(135deg, hsl(0 0% 85%), hsl(0 0% 65%));
+    --gradient-metallic: linear-gradient(45deg, hsl(0 0% 75%), hsl(0 0% 85%), hsl(0 0% 70%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 12%), hsl(0 0% 8%));
+    
+    /* Shadows */
+    --shadow-silver: 0 10px 30px -5px hsl(0 0% 75% / 0.3);
+    --shadow-metallic: 0 0 20px hsl(0 0% 85% / 0.4);
+    --shadow-glow: 0 0 40px hsl(0 0% 85% / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
